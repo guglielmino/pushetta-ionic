@@ -1,0 +1,20 @@
+<ion-view view-title="Notifications">
+  <ion-content>
+    <ion-list show-delete="data.showDelete" >
+      <ion-item ng-repeat="notification in data.notifications"  
+     			class="item item-thumbnail-left">
+
+     	
+     			<img ng-src="{{notification.channel.image}}" alt="{{notification.channel.name}}" > 
+     			<h2>{{notification.channel.name}}</h2>
+        <h4>{{notification.body}}</h4>
+        
+        <ion-option-button class="button-assertive"
+                       ng-click="delete(notification)">
+      	Delete
+    	</ion-option-button>
+      </ion-item>
+  </ion-content>
+</ion-view>
+
+

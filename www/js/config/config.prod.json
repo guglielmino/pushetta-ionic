@@ -1,0 +1,14 @@
+{
+	"name": "pushetta.config",
+	"deps": [],
+	"constants": {
+		"env": {
+			"name": "production",
+			"ionic": {
+				"env": "prod",
+				"key": "",
+				"app_id": ""
+			}
+		}
+	}
+}

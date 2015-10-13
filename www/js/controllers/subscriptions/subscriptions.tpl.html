@@ -1,0 +1,20 @@
+<ion-view view-title="Subscriptions">
+  <ion-content>
+    <ion-list show-delete="data.showDelete" >
+      <ion-item ng-repeat="subscription in data.subscriptions"  
+     			class="item item-thumbnail-left">
+
+     	
+     			<img ng-src="{{subscription.image}}" alt="{{subscription.description}}" > 
+     			<h2>{{subscription.name}}</h2>
+        <h4>{{subscription.description}}</h4>
+        
+        <ion-option-button class="button-assertive"
+                       ng-click="unsubscribe(subscription)">
+      	Unsubscribe
+    	</ion-option-button>
+      </ion-item>
+  </ion-content>
+</ion-view>
+
+
