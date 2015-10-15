@@ -18,7 +18,7 @@ angular.module('pushetta')
       });
   });
 
-angular.module('pushetta.controllers.notifications', [])
+appModule('pushetta.controllers')
 
 .controller('NotificationsCtrl', ['$scope', 'notificationSvc', function($scope, notificationSvc) {
 

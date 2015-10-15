@@ -18,10 +18,13 @@ angular.module('pushetta')
       });
   });
 
-angular.module('pushetta.controllers.subscriptions', [])
+appModule('pushetta.controllers')
 
 .controller('SubscriptionsCtrl', ['$scope', 'subscriptionsSvc', function($scope, subscriptionsSvc) {
 
+  function bindResults(results) {
+    $scope.data.subscriptions = results;
+  }
   $scope.data = {};
 
   $scope.data.subscriptions = [];

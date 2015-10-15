@@ -2,16 +2,20 @@
   <ion-content class="has-header">
    <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="Search" ng-model="searchText">
+        <input type="search" placeholder="Search" ng-model="data.searchText">
     </label>
     <ion-list >
       <ion-item ng-repeat="featured in data.featured"  
-          class="item item-thumbnail-left">
-          
+          class="item item-thumbnail-left item-button-right" >
+
           <img ng-src="{{featured.image}}" alt="{{featured.description}}" > 
           <h2>{{featured.name}}</h2>
-        <h4>{{featured.description}}</h4>
-        
+          <h4>{{featured.description}}</h4>
+
+          <button class="button button-positive" ng-click="subscribe(featured)">
+            Subscribe
+          </button>
+
       </ion-item>
   </ion-content>
 </ion-view>

@@ -11,6 +11,10 @@ angular.module('pushetta.services.api.subscriptions', [])
 				});
 		};
 
+		SubscriptionsSvc.prototype.subscribeChannel = function(channel) {
+
+		};
+
 		return SubscriptionsSvc;
 	}])
 	.service('subscriptionsSvc', ['SubscriptionsSvc', function(SubscriptionsSvc) {

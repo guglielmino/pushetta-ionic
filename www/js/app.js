@@ -3,12 +3,11 @@
 
 angular.module('pushetta', [
   'ionic', 'ionic.service.core',
-  'pushetta.controllers.notifications',
-  'pushetta.controllers.subscriptions',
-  'pushetta.controllers.featured',
+  'pushetta.controllers',
   'pushetta.services.api.notifications',
   'pushetta.services.api.subscriptions',
   'pushetta.services.api.featured',
+  'pushetta.services.api.search',
   'pushetta.services.storage',
   'ngCordova'
 ])
