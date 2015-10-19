@@ -3,7 +3,11 @@ angular.module('pushetta')
         var dividers = {};
 
         function resolveKind(kind) {
-            return "KIND " + kind;
+            switch (kind) {
+                case 1:
+                    return "SUBSCRIBED CHANNELS";
+            }
+            return "";
         }
 
         return function(input) {

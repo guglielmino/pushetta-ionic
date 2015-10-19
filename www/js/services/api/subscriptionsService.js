@@ -11,8 +11,20 @@ angular.module('pushetta.services.api.subscriptions', [])
 				});
 		};
 
-		SubscriptionsSvc.prototype.subscribeChannel = function(channel) {
+		SubscriptionsSvc.prototype.subscribeChannel = function(channel, subtype, deviceId, token) {
+			return $http.post('http://api.pushetta.com/api/channel/subscription/' + channel + '/')
+				.then(function(results) {
+					return results.data;
+				});
+			/*
+				Payload
+				{
+					sub_type: "ios"|"android" (check server side)
+					device_id: "1234556"
+					token: "aaaasddffggggg"
+				}
 
+			*/
 		};
 
 		return SubscriptionsSvc;

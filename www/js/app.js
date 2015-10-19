@@ -14,6 +14,16 @@ angular.module('pushetta', [
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+    Ionic.io();
+
+    var push = new Ionic.Push({
+      "debug": true
+    });
+
+    push.register(function(token) {
+      console.log("Device token:", token.token);
+    });
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {

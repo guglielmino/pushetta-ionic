@@ -5,9 +5,7 @@
 		"env": {
 			"name": "develpment",
 			"ionic": {
-				"env": "dev",
-				"key": "",
-				"app_id": ""
+				"env": "dev"
 			}
 		}
 	}
